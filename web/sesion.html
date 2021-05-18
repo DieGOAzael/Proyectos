@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Salud.Maps | Identificarse</title>
+    <script src="validacion.js"></script>
+</head>
+    <body>
+        <header>
+       <ul>
+           <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
+           <li><a href="index.jsp"><b>Buscar</b></a></li>
+           <li><a href="#" class="active"><b>Identificarse</b></a></li>
+           <li><a href="quienes.html"><b>Conocer</b></a></li>
+       </ul> 
+    </header>  
+            <div class="cuadro_identificarse" >
+                <form method="post" name="registroempleado" action="guardarEmpleado">
+                    <h3>Ingresar</h3>
+                    <div class="container">
+                        <input type="text" placeholder="Nombre de usuario" name="nombre" required minlength="6" maxlength="35" onkeypress="return soloLetras(event)">
+                    </div>
+                    <div class="container">
+                        <input type="email" placeholder="Correo electrónico" name="email" required onsubmit="return validarEmail(event)">
+                    </div>
+                    <div class="container">
+                        <input type="password"  placeholder="Contraseña" name="password"required required minlength="8" maxlength="32" onkeypress="return validar_clave(event)">
+                    </div>
+                    <input type="submit" value="Registrarse/iniciar sesión" name="enviar">     
+                </form>
+            </div>
+            <br>
+            <div class="containerConsulta" >
+                <a href="consultarEmpleados.jsp" >Consultar Todos los Empleados</a>     
+            </div>
+    </body>
+</html>
+
+                                       
+           
