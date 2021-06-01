@@ -18,23 +18,45 @@
            <li><a href="quienes.html"><b>Conocer</b></a></li>
        </ul> 
     </header>  
+        <!--Registro -->
             <div class="cuadro_identificarse" >
-                <form method="post" name="registroempleado" action="guardarEmpleado">
-                    <h3>Ingresar</h3>
+                <form method="post" name="registrousuario" action="guardarUsuario">
+                    <h3>Registro</h3>
                     <div class="container">
-                        <input type="text" placeholder="Nombre de usuario" name="nombre" required minlength="6" maxlength="35" onkeypress="return soloLetras(event)">
+                        <input type="text" placeholder="Nombre de usuario" name="nom_usu" required minlength="6" maxlength="35" onkeypress="return soloLetras(event)">
                     </div>
                     <div class="container">
-                        <input type="email" placeholder="Correo electrónico" name="email" required onsubmit="return validarEmail(event)">
+                        <input type="email" placeholder="Correo electrónico" name="ema_usu" required onsubmit="return validarEmail(event)">
                     </div>
                     <div class="container">
-                        <input type="password"  placeholder="Contraseña" name="password"required required minlength="8" maxlength="32" onkeypress="return validar_clave(event)">
+                        <input type="password"  placeholder="Contraseña" name="con_usu"required required minlength="8" maxlength="32" onkeypress="return validar_clave(event)">
                     </div>
-                    <input type="submit" value="Registrarse/iniciar sesión" name="enviar">     
+                    <input type="submit" value="Registrarse" name="enviar">     
                 </form>
             </div>
+        
+        <!--Inicio de sesión -->
+        <div class="cuadro_identificarse" >
+                <form method="post" name="VerificarUsuario" name="login">
+                    <h3>Inicio de Sesión</h3>
+                    <div class="container">
+                        <input type="text" placeholder="Nombre de usuario" name="txtUsuario" id="txtUsuario" required minlength="6" maxlength="35" onkeypress="return soloLetras(event)">
+                    </div>
+                    
+                    <div class="container">
+                        <input type="password"  placeholder="Contraseña" name="txtPassword" id="txtPassword" required required minlength="8" maxlength="32" onkeypress="return validar_clave(event)">
+                    </div>
+                    <input type="submit" value="Iniciar sesión" name="enviar">     
+                </form>
+            </div>
+        
             <br>
             <div class="containerConsulta" >
+                
+                <a href="actualizarusuario.jsp" >Editar cuenta</a>
+                <br>
+              <!--Este link no puede ser usado por la gente 
+              -->
                 <a href="consultarEmpleados.jsp" >Consultar Todos los Empleados</a>     
             </div>
     </body>

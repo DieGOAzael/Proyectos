@@ -13,6 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
+    
     <title>Salud.Maps | Buscar</title>
 </head>
 <body>
@@ -46,10 +48,9 @@
       </div>
     </div>
 
-
         
     <div class="cuadro_busqueda">
-        <p style="margin-left: 25px">Llena los filtros para realizar una búsqueda.<hr></p>
+        <p style="margin-left: 25px">Llena los filtros para realizar una búsqueda.<hr>
         <!--Aquí es la selección del tipo de lugar relacionado a la salud.-->
         <select name="mes" id="mes" style="margin-left: 25px; font-size: large;">
             <option value="0">Lugar</option>
@@ -80,6 +81,10 @@
         <button style="margin-left: 500px; font-size: large;">Buscar</button>
     </div>
 
+    
+    
+    
+    
     <div class="cuadro_lugares">
         <section>
             <!--for demo wrap-->
@@ -105,6 +110,37 @@
                     <td>$1.38</td>
                     <td>+2.01</td>
                     <td>-0.36%</td>
+                    <td>
+                        
+                       <!--Pop up -->
+<div class="contenedor">
+		<article>
+			<button id="btn-abrir-popup" class="btn-abrir-popup">Abrir lugar</button>
+                        
+		</article>
+
+		<div class="overlay" id="overlay">
+			<div class="popup" id="popup">
+				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+				<h3>SUSCRIBETE</h3>
+				<h4>Información del Lugar</h4>
+				<div class="tbl-content">
+                                <table cellpadding="0" cellspacing="0" border="0">
+
+                                    <tr>
+                                      <td>AAC</td>
+                                      <td>AUSTRALIAN COMPANY </td>
+                                      <td>$1.38</td>
+                                      <td>+2.01</td>
+                                      <td>-0.36%</td>
+                                    </tr>              
+                                </table>
+            </div>
+			</div>
+		</div>
+	</div>
+                        
+                    </td>
                   </tr>
                   <tr>
                     <td>AAD</td>
@@ -328,6 +364,6 @@
             </div>
           </section>
     </div>
-    
+    <script type="text/javascript" src="popup.js"></script>
 </body>
 </html>
