@@ -102,8 +102,8 @@
             
             %>
             
-        <div class="cuadro_lugares">
-        <section>
+            <div class="cuadro_lugares">
+        
             <!--Encabezado-->
             <div class="tbl-header">
               <table cellpadding="0" cellspacing="0" border="0">
@@ -119,7 +119,9 @@
                 </thead>
               </table>
             </div>
-        </div>
+        
+            </div>
+        
             
             <%
             //recorrer el vector del producto
@@ -130,6 +132,7 @@
         
             <!--Empieza la tabla de los lugares-->
             <div class="cuadro_lugares">
+                
                 <div class="tbl-content">
               <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
@@ -172,7 +175,7 @@
                 </tbody>
               </table>
             </div>
-          </section>
+          
     </div>
             </div>
             
