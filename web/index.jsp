@@ -4,6 +4,9 @@
     Author     : DataJockey
 --%>
 
+<%@page import="Control.AccionesLugar"%>
+<%@page import="Modelo.Lugar"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,7 +16,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="popup.css">
     
     <title>Salud.Maps | Buscar</title>
 </head>
@@ -23,7 +25,10 @@
            <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
            <li><a href="#" class="active"><b>Buscar</b></a></li>
            <li><a href="sesion.html"><b>Identificarse</b></a></li>
-           <li><a href="quienes.html"><b>Conocer</b></a></li>
+           <li><a href="quienes.html"><b>Conócenos</b></a></li>
+           <li><a href="favoritos.jsp"><b>Favoritos</b></a></li>
+           <li><a href="controlAdmin.html"><b>Administrador</b></a></li>
+           
        </ul> 
     </header>
     <div class="intro-header">
@@ -52,14 +57,15 @@
     <div class="cuadro_busqueda">
         <p style="margin-left: 25px">Llena los filtros para realizar una búsqueda.<hr>
         <!--Aquí es la selección del tipo de lugar relacionado a la salud.-->
-        <select name="mes" id="mes" style="margin-left: 25px; font-size: large;">
+        <form action="">
+        <select name="tipo" id="id_tip" style="margin-left: 25px; font-size: large;">
             <option value="0">Lugar</option>
             <option value="1">Centro de salud</option>
             <option value="2">Hospital</option>
             <option value="3">Funeraria</option>
         </select>
         <!--Aquí es la selección de las alcaldías.-->
-        <select name="mes" id="mes" style="margin-left: 50px; font-size: large;">
+        <select name="alcaldia" id="id_alc" style="margin-left: 50px; font-size: large;">
             <option value="0">Alcaldía</option>
             <option value="1">Azcapotzalco</option>
             <option value="2">Benito Juárez</option>
@@ -78,292 +84,101 @@
             <option value="15">Venustiano Carranza</option>
             <option value="16">Xochimilco</option>
         </select>
-        <button style="margin-left: 500px; font-size: large;">Buscar</button>
+        <input type="submit" value="Buscar" style="margin-left: 500px; font-size: large;">
+        </form>
     </div>
+    <%
+        /*
+        String id_tip, id_alc;
+            
+            id_tip = request.getParameter("id_tip");
+            id_alc = request.getParameter("id_alc");
+*/
+        %>
 
-    
-    
-    
-    
-    <div class="cuadro_lugares">
+     <%
+            //todos los lugares
+            List<Lugar> lista = new AccionesLugar().getAllLugar();
+            
+            %>
+            
+        <div class="cuadro_lugares">
         <section>
-            <!--for demo wrap-->
+            <!--Encabezado-->
             <div class="tbl-header">
               <table cellpadding="0" cellspacing="0" border="0">
                 <thead>
                   <tr>
-                    <th>Code</th>
-                    <th>Company</th>
-                    <th>Price</th>
-                    <th>Change</th>
-                    <th>Change %</th>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Calificación</th>
+                    <th>Abrir lugar</th>
+                    <th>Agregar a favoritos</th>
                   </tr>
                 </thead>
               </table>
             </div>
-            <div class="tbl-content">
+        </div>
+            
+            <%
+            //recorrer el vector del producto
+            for(Lugar lugar : lista){
+            //voy imprimiendo producto por producto
+            
+            %>
+        
+            <!--Empieza la tabla de los lugares-->
+            <div class="cuadro_lugares">
+                <div class="tbl-content">
               <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                   <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                    <td>
-                        
-                       <!--Pop up -->
-<div class="contenedor">
-		<article>
-			<button id="btn-abrir-popup" class="btn-abrir-popup">Abrir lugar</button>
-                        
-		</article>
+                    <td><%=lugar.getNom_lug()%></td>
+                    <td><%=lugar.getSt_lug()%></td>
+                    <td><%=lugar.getTel_lug()%></td>
+                    <td><%=lugar.getCal_lug()%></td>
+                    <td><!--Pop up -->
+                        <div class="contenedor">
+                            <article>
+                                <button id="btn-abrir-popup" class="btn-abrir-popup">Abrir lugar</button>
 
-		<div class="overlay" id="overlay">
-			<div class="popup" id="popup">
-				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-				<h3>SUSCRIBETE</h3>
-				<h4>Información del Lugar</h4>
-				<div class="tbl-content">
-                                <table cellpadding="0" cellspacing="0" border="0">
+                            </article>
+
+                            <div class="overlay" id="overlay">
+                                <div class="popup" id="popup">
+                                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                                    <h3>SUSCRIBETE</h3>
+                                    <h4>Información del Lugar</h4>
+                                    <div class="tbl-content">
+                                    <table cellpadding="0" cellspacing="0" border="0">
 
                                     <tr>
-                                      <td>AAC</td>
-                                      <td>AUSTRALIAN COMPANY </td>
-                                      <td>$1.38</td>
-                                      <td>+2.01</td>
-                                      <td>-0.36%</td>
+                                    <td>hola</td>
+                                    <td>AUSTRALIAN COMPANY </td>
+                                    <td>$1.38</td>
+                                    <td>+2.01</td>
+                                    <td>-0.36%</td>
                                     </tr>              
-                                </table>
-            </div>
-			</div>
-		</div>
-	</div>
-                        
-                    </td>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </td>
+                    <td>Agregar a Favoritos</td>
                   </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
+                
                 </tbody>
               </table>
             </div>
           </section>
     </div>
+            </div>
+            
+                    <%
+                        }
+                    %>
     <script type="text/javascript" src="popup.js"></script>
 </body>
 </html>

@@ -14,6 +14,6 @@
     <body>
         <h1>Sitio en Construcción</h1>
         <br>
-        <a href="index.html" >Regresar al Menu Principal</a>
+        <a href="index.jsp" >Regresar al Menu Principal</a>
     </body>
 </html>

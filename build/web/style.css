@@ -207,29 +207,10 @@ table{
     color: rgb(143, 37, 37);
     border-bottom: solid 1px rgba(255,255,255,0.1);
   }
-  .made-with-love {
-    margin-top: 40px;
-    padding: 10px;
-    clear: left;
-    text-align: center;
-    font-size: 10px;
-    font-family: arial;
-    color: rgb(128, 54, 121);
-  }
-  .made-with-love i {
-    font-style: normal;
-    color: #F50057;
-    font-size: 14px;
-    position: relative;
-    top: 2px;
-  }
-  .made-with-love a {
-    color: rgb(6, 89, 100);
-    text-decoration: none;
-  }
-  .made-with-love a:hover {
-    text-decoration: underline;
-  }
+
+section{
+  margin: 50px;
+}
   
   /*pop up*/
   .contenedor {

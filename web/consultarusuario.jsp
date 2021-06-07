@@ -12,6 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css">
         <title>Seccion que como administradores podemos controlar</title>
     </head>
     <body>
@@ -36,8 +37,8 @@
                     <tr>
                         <td> <%=e.getId_usu()%> </td>
                         <td> <%=e.getNom_usu()%> </td>
-                        <td> <%=e.getCon_usu()%> </td>
                         <td> <%=e.getEma_usu()%> </td>
+                        <td> <%=e.getCon_usu()%> </td>
                         <td> <a href="editarempleado.jsp?id=<%=e.getId_usu()%>" >Editar</a> </td>
                         <td> <a href="borrarempleado?id=<%=e.getId_usu()%>" >Borrar</a> </td>
                     </tr>    

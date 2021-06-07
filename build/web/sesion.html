@@ -15,12 +15,13 @@
            <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
            <li><a href="index.jsp"><b>Buscar</b></a></li>
            <li><a href="#" class="active"><b>Identificarse</b></a></li>
-           <li><a href="quienes.html"><b>Conocer</b></a></li>
+           <li><a href="quienes.html"><b>Conócenos</b></a></li>
+           <li><a href="favoritos.jsp"><b>Favoritos</b></a></li>
        </ul> 
     </header>  
         <!--Registro -->
             <div class="cuadro_identificarse" >
-                <form method="post" name="registrousuario" action="guardarUsuario">
+                <form method="post" name="registrarUsuario" action="guardarUsuario">
                     <h3>Registro</h3>
                     <div class="container">
                         <input type="text" placeholder="Nombre de usuario" name="nom_usu" required minlength="6" maxlength="35" onkeypress="return soloLetras(event)">
@@ -31,13 +32,13 @@
                     <div class="container">
                         <input type="password"  placeholder="Contraseña" name="con_usu"required required minlength="8" maxlength="32" onkeypress="return validar_clave(event)">
                     </div>
-                    <input type="submit" value="Registrarse" name="enviar">     
+                    <input type="submit" value="Registrarse">     
                 </form>
             </div>
         
         <!--Inicio de sesión -->
         <div class="cuadro_identificarse" >
-                <form method="post" name="VerificarUsuario" name="login">
+                <form method="post" action="verificarUsuario" name="login">
                     <h3>Inicio de Sesión</h3>
                     <div class="container">
                         <input type="text" placeholder="Nombre de usuario" name="txtUsuario" id="txtUsuario" required minlength="6" maxlength="35" onkeypress="return soloLetras(event)">
@@ -57,7 +58,7 @@
                 <br>
               <!--Este link no puede ser usado por la gente 
               -->
-                <a href="consultarEmpleados.jsp" >Consultar Todos los Empleados</a>     
+                <a href="consultarusuario.jsp" >Consultar Usuarios</a>     
             </div>
     </body>
 </html>

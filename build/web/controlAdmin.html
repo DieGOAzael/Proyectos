@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/icon.png" type="image/png">
+        <link rel="stylesheet" href="styleadmin.css">
+        <title>Acciones del administrador</title>
+    </head>
+    <body>
+        <header>
+       <ul>
+           <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
+           <li><a href="index.jsp"><b>Buscar</b></a></li>
+       </ul> 
+    </header>
+        
+        <div class="cuadro_identificarse" >
+                <form method="post" name="registrarUsuario" action="guardarLugar">
+                      <h3>Agregar Lugar</h3>
+                    <div class="container">
+                        <input type="text" placeholder="Nombre del lugar" name="nom_lug" required minlength="6" maxlength="35" onkeypress="return soloLetras(event)">
+                    </div>
+                    <div class="container">
+                        <input type="text" placeholder="Contacto del Lugar (teléfono)" name="tel_lug" required minlength="8" maxlength="32" onsubmit="return validarEmail(event)">
+                    </div>
+                    <div class="container">
+                        <input type="text"  placeholder="Calle del Lugar" name="st_lug"required required minlength="8" maxlength="32" onkeypress="return validar_clave(event)">
+                    </div>
+                    <div class="container">
+                        <input type="text" placeholder="Calificación del lugar" name="cal_lug" required minlength="6" maxlength="35" onkeypress="return soloLetras(event)">
+                    </div>
+                    <div class="container">
+                        <input type="text" placeholder="Sitio web o link" name="url_lug" required minlength="8" maxlength="32" onsubmit="return validarEmail(event)">
+                    </div>
+                    <div class="container">
+                        <select name="id_al"> 
+                                    <option value="1">Azcapotzalco</option>
+                                    <option value="2">Benito Juárez</option>
+                                    <option value="3">Coyoacán</option>
+                                    <option value="4">Cuajimalpa de Morelos</option>
+                                    <option value="5">Cuauhtémoc</option>
+                                    <option value="6">Gustavo A. Madero</option>
+                                    <option value="7">Iztacalco</option>
+                                    <option value="8">Iztapalapa</option>
+                                    <option value="9">La Magdalena Contreras</option>
+                                    <option value="10">Álvaro Obregón</option>
+                                    <option value="11">Miguel Hidalgo</option>
+                                    <option value="12">Milpa Alta</option>
+                                    <option value="13">Tlalpan</option>
+                                    <option value="14">Tláhuac</option>
+                                    <option value="15">Venustiano Carranza</option>
+                                    <option value="16">Xochimilco</option>
+                        </select>
+                    </div>
+                    <div class="container">
+                        <select name="id_tip"> 
+                                    <option value="1">Hospital</option>
+                                    <option value="2">Funeraria</option>
+                                    <option value="3">Centro de Salud</option>
+                        </select>
+                    </div>
+                      <div class="container">
+                          <select name="id_cp">
+                                    <option value="1">2060</option>
+                                    <option value="2">2000</option>
+                                    <option value="3">2940</option>
+                                    <option value="4">3660</option>
+                                    <option value="5">3340</option>
+                                    <option value="6">3800</option>
+                                    <option value="7">4904</option>
+                                    <option value="8">4000</option>
+                                    <option value="9">4310</option>
+                                    <option value="10">5000</option>
+                                    <option value="11">5210</option>
+                                    <option value="12">5320</option>
+                                    <option value="13">6250</option>
+                                    <option value="14">6020</option>
+                                    <option value="15">6600</option>
+                                    <option value="16">7420</option>
+                                    <option value="17">7330</option>
+                                    <option value="18">7310</option>
+                                    <option value="19">8100</option>
+                                    <option value="20">8310</option>
+                                    <option value="21">8240</option>
+                                    <option value="22">9780</option>
+                                    <option value="23">9660</option>
+                                    <option value="24">9830</option>
+                                    <option value="25">10700</option>
+                                    <option value="26">10200</option>
+                                    <option value="27">10580</option>
+                                    <option value="28">1560</option>
+                                    <option value="29">11800</option>
+                                    <option value="30">1160</option>
+                                    <option value="31">11320</option>
+                                    <option value="32">11340</option>
+                                    <option value="33">11290</option>
+                                    <option value="34">12100</option>
+                                    <option value="35">12000</option>
+                                    <option value="36">12000</option>
+                                    <option value="37">14050</option>
+                                    <option value="38">14500</option>
+                                    <option value="39">14389</option>
+                                    <option value="40">13400</option>
+                                    <option value="41">13050</option>
+                                    <option value="42">13000</option>
+                                    <option value="43">15300</option>
+                                    <option value="44">15970</option>
+                                    <option value="45">15700</option>
+                                    <option value="46">16730</option>
+                                    <option value="47">16090</option>
+                                    <option value="48">16210</option>
+                                    
+                          </select>
+                      </div>
+                    
+                <input type="submit" value="Registrar lugar">   
+                </form>
+        </div>
+    </body>
+</html>

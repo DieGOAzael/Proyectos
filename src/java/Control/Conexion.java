@@ -13,21 +13,27 @@ public class Conexion {
             Class.forName("com.mysql.jdbc.Driver");
             String url, userName, password;
             
-            url = "jdbc:mysql://localhost/CarritoHelados4IV8";
+            url = "jdbc:mysql://localhost/salud_maps";
             userName = "root";
-            password= "n0m3l0";
+            password= "Boby15_9634";
             
             return DriverManager.getConnection(url, userName, password);
         
         }catch(SQLException sq){
-            System.out.println("Error al conectar con la BD");
+            System.out.println("Error al conectar con la BD de Salud Maps");
             System.out.println(sq.getMessage());
         
         }catch(Exception e){
-            System.out.println("No encuentra la clase");
+            System.out.println("No se encuentra la clase D:");
             System.out.println(e.getMessage());
         }
         return null;
     }
+    /*este parte es solo para comprobar que conexion sí se logra*/
+    /*
+    public static void main(String[] args){
+        Conexion con = new Conexion();
+    }
+    */
     
 }

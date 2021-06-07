@@ -140,11 +140,48 @@ public class AccionesLugar {
         
         try{
             Connection con = Conexion.getConnection();
-            String q = "select * from MLugar";
+            String q = "select * from mlugar";
             /* aquí hay otra cuestion de la base*/
             PreparedStatement ps = con.prepareStatement(q);
 
             
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                Lugar e = new Lugar();
+                e.setId_lug(rs.getInt(1));
+                e.setTel_lug((int) rs.getLong(2));
+                e.setNom_lug(rs.getString(3));
+                e.setCal_lug(rs.getInt(4));
+                e.setSt_lug(rs.getString(5));
+                e.setId_ad(rs.getInt(6));
+                e.setId_al(rs.getInt(7));
+                e.setId_col(rs.getInt(8));
+                e.setId_cp(rs.getInt(9));
+                e.setId_tip(rs.getInt(10));
+                lista.add(e);
+            }
+            System.out.println("Lugar encontrado.");
+            con.close();
+        }catch(Exception ed){
+            System.out.println("Error al buscar los lugares");
+            System.out.println(ed.getMessage());
+        
+        }
+        return lista;
+        
+    }
+    
+    /*Veremos si sirve*/
+   
+    public static List<Lugar> getFiltroLugar(int id_tip, int id_alc){
+        List<Lugar> lista = new ArrayList<Lugar>();
+        
+        try{
+            Connection con = Conexion.getConnection();
+            if(id_tip == 1){
+                String q = "select * from MLugar where id_lug = ?";
+                PreparedStatement ps = con.prepareStatement(q);
+                /* aquí hay otra cuestion de la base*/
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 Lugar e = new Lugar();
@@ -160,6 +197,45 @@ public class AccionesLugar {
                 e.setId_cp(rs.getInt(10));
                 lista.add(e);
             }
+            }else if(id_tip == 2){
+                String q = "select * from MLugar where id_lug = ?";
+                PreparedStatement ps = con.prepareStatement(q);
+                /* aquí hay otra cuestion de la base*/
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                Lugar e = new Lugar();
+                e.setId_lug(rs.getInt(1));
+                e.setNom_lug(rs.getString(2));
+                e.setSt_lug(rs.getString(3));
+                e.setCom_lug(rs.getString(4));
+                e.setTel_lug(rs.getInt(5));
+                e.setCal_lug(rs.getInt(6));
+                e.setId_ad(rs.getInt(7));
+                e.setId_al(rs.getInt(8));
+                e.setId_col(rs.getInt(9));
+                e.setId_cp(rs.getInt(10));
+                lista.add(e);
+            }
+            }else if(id_tip == 3){
+                String q = "select * from MLugar where id_lug = ?";
+                PreparedStatement ps = con.prepareStatement(q);
+                /* aquí hay otra cuestion de la base*/
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                Lugar e = new Lugar();
+                e.setId_lug(rs.getInt(1));
+                e.setNom_lug(rs.getString(2));
+                e.setSt_lug(rs.getString(3));
+                e.setCom_lug(rs.getString(4));
+                e.setTel_lug(rs.getInt(5));
+                e.setCal_lug(rs.getInt(6));
+                e.setId_ad(rs.getInt(7));
+                e.setId_al(rs.getInt(8));
+                e.setId_col(rs.getInt(9));
+                e.setId_cp(rs.getInt(10));
+                lista.add(e);
+            }
+            }
             System.out.println("Lugar encontrado.");
             con.close();
         }catch(Exception ed){
@@ -170,6 +246,4 @@ public class AccionesLugar {
         return lista;
         
     }
-    
-    
 }

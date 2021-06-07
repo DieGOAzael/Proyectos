@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    
+    <body>
         <!--Este jsp no se muy bien que hace
         -->
         <h1>Registro de Empleado Exitoso</h1>
@@ -21,11 +21,11 @@
             //si es de una bd el metodo de verificarusuario(String user, Strig pass)
             //haces una instancias del usuario
                                                   //e.usuario  
-            sesionCliente.setAttribute("Usuario", "Mario");
+            sesionCliente.setAttribute("Usuario", "e.usuario");
             %>
         <br>
         Bienvenido: <% out.println(sesionCliente.getAttribute("Usuario"));  %>
         <br>
         <a href="index.jsp" >Regresar al Menu Principal</a>
-    
+    </body>
 </html>

@@ -11,7 +11,12 @@ import java.util.*;
 
 public class AccionesUsuario {
     
-     public static int registrarUsuario(Usuario e){
+    /**
+     *
+     * @param e
+     * @return
+     */
+    public static int registrarUsuario(Usuario e){
         int estatus = 0;
         try{
             Connection con = Conexion.getConnection();
@@ -23,7 +28,9 @@ public class AccionesUsuario {
             ps.setString(1, e.getNom_usu());
             ps.setString(2, e.getCon_usu());
             ps.setString(3, e.getEma_usu());
+            
             estatus = ps.executeUpdate();
+            
             System.out.println("Se a registrado exitosamente.");
             con.close();
         }catch(Exception ed){
@@ -33,7 +40,9 @@ public class AccionesUsuario {
         }
         return estatus;
         
+        
     }
+    
     
     public static int actualizarUsuario(Usuario e){
         int estatus = 0;
@@ -98,8 +107,9 @@ public class AccionesUsuario {
             if(rs.next()){
                 e.setId_usu(rs.getInt(1));
                 e.setNom_usu(rs.getString(2));
-                e.setCon_usu(rs.getString(3));
-                e.setEma_usu(rs.getString(4));
+                e.setEma_usu(rs.getString(3));
+                e.setCon_usu(rs.getString(4));
+                
             }
             System.out.println("Usuario encontrado.");
             con.close();
@@ -117,7 +127,7 @@ public class AccionesUsuario {
         
         try{
             Connection con = Conexion.getConnection();
-            String q = "select * from MUsuarios";
+            String q = "select * from MUsuario";
             /* aquí hay otra cuestion de la base*/
             PreparedStatement ps = con.prepareStatement(q);
 

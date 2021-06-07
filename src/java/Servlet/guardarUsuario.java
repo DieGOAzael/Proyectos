@@ -77,7 +77,7 @@ public class guardarUsuario extends HttpServlet{
                         + "Su valor es: " + valor.toString());
             }
             
-            String nom_usu, con_usu, ema_usu;
+           String nom_usu, con_usu, ema_usu;
             
             nom_usu = request.getParameter("nom_usu");
             con_usu = request.getParameter("con_usu");
@@ -101,7 +101,8 @@ public class guardarUsuario extends HttpServlet{
             
         }
     }
-// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -139,5 +140,6 @@ public class guardarUsuario extends HttpServlet{
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-    
+
 }
+

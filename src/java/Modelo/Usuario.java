@@ -35,8 +35,7 @@ public class Usuario {
         ResultSet rs = null;
         try{
             con = Conexion.getConnection();
-            String q = "select * from MUsuario "
-                    + "where ema_usu = ? AND con_usu = ?";
+            String q = "select * from MUsuario where nom_usu = ? AND con_usu = ?";
             
             ps = con.prepareStatement(q);
             
@@ -51,7 +50,8 @@ public class Usuario {
                 u.setNom_usu(rs.getString("nom_usu"));
                 u.setEma_usu(rs.getString("ema_usu"));
                 u.setCon_usu(rs.getString("con_usu"));
-                u.setPrivilegio_usuario(rs.getInt("privilegio_usuario"));
+                /*
+                u.setPrivilegio_usuario(rs.getInt("privilegio_usuario"));*/
                 break;
                 
             }
