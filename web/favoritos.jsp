@@ -14,7 +14,7 @@
     
     %>
     
-    <jsp:forward page="index.jsp">
+    <jsp:forward page="porfaregistrate.jsp">
         <jsp:param name="error" value="Es obligatorio Identificarse" />
         
     </jsp:forward>
@@ -75,6 +75,28 @@
             </div>
           --%>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+    
+    
             
             <%    
             /*}

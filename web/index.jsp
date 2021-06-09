@@ -237,6 +237,7 @@
                              N 9° "Juan De Dios Batiz"
                        </label>
                    </div>
+                   <a href="porfaregistrate.jsp"></a>
 
                    <div class="row2">
                        <img src="img/smartphone.png">

@@ -1,7 +1,7 @@
 <%-- 
-    Document   : error
-    Created on : 14/05/2021, 06:18:40 PM
-    Author     : DataJockey
+    Document   : porfaregistrate
+    Created on : 9/06/2021, 02:03:24 PM
+    Author     : aza06
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,24 +14,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <title>Salud.Maps | Error</title>
+    <title>Salud.Maps | Registrate para acceder a favoritos</title>
     </head>
     <body>
         <header>
        <ul>
            <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
-           <li><a href="index.jsp"><b>Buscar</b></a></li>
+           <li><a href="sesion.html"><b>Identificarse</b></a></li>
        </ul> 
     </header>
         <!--Este jsp no se muy bien que hace
         -->
         <div class="cuadro_texto">
-        <h1>¡Zas, ha ocurrido un error!</h1>
+        <h1>Inicia sesión para poder acceder</h1>
         
         <br>
         
-        <h3>Error inesperado</h3>
-        <h3>Disculpe las molestias.</h3>
+        <h3>Se necesita iniciar sesión para entrar a la barra de favoritos.</h3>
+        <h3>Ingrese a la sección de "Identificarse" y registrate o inicia sesión.</h3>
         
         <br>
         </div>

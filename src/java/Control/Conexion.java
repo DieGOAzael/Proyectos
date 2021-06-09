@@ -12,10 +12,9 @@ public class Conexion {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             String url, userName, password;
-            
-            url = "jdbc:mysql://localhost/salud_maps";
-            userName = "root";
-            password= "Boby15_9634";
+            url = "jdbc:mysql://us-cdbr-east-04.cleardb.com/heroku_80d8318be6377a9";
+            userName = "b0180b357a408c";
+            password = "5fb85820";
             
             return DriverManager.getConnection(url, userName, password);
         
