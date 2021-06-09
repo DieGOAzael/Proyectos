@@ -54,7 +54,8 @@
     </div>
    
         <div class="cuadro_texto">
-           <h3>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            <center><h3><b>Instrucciones de uso</b></h3></center>
+           <h3>Salud.Maps te permite visualizar tres tipos de lugares relacionados a la salud en la alcaldía de tu elección: centros de salud, hospitales y funerarias. Para realizar tu búsqueda, elige dos opciones en los filtros de abajo y da clic en <i>Buscar</i>. Selecciona el lugar de tu preferencia para visualizar su información.
          </h3>
         </div>
     
@@ -182,6 +183,90 @@
                         }
                     %>
     <script type="text/javascript" src="popup.js"></script>
-    
+    <br>
+    <br>
+<center><iframe src="https://www.google.com/maps/d/embed?mid=1KQGa6fGl3QzvmmUw7WGmr0kxESfatl2j" width="640" height="480"></iframe></center>
+<footer>
+       
+      <div class="container-footer-all">
+       
+           <div class="container-body">
+
+               <div class="colum1">
+                   <h1>Mas informacion de la compañia</h1>
+
+                   <p>Para poder tener nustra informacion ir al siguiente link:.</p>
+                        <a href="./quienes.html">Quienes somos?</a>
+               </div>
+
+               <div class="colum2">
+
+                   <h1>Redes Sociales</h1>
+
+                   <div class="row2">
+                       <img src="img/facebook.png">
+                       <label>Siguenos en Facebook</label>
+                   </div>
+                   <div class="row2">
+                       <img src="img/twitter.png">
+                       <label>Siguenos en Twitter</label>
+                   </div>
+                   <div class="row2">
+                       <img src="img/instagram.png">
+                       <label>Siguenos en Instagram</label>
+                   </div>
+                   <div class="row2">
+                       <img src="img/google-plus.png">
+                       <label>Siguenos en Google Plus</label>
+                   </div>
+                   <div class="row2">
+                       <img src="img/pinterest.png">
+                       <label>Siguenos en Pinterest</label>
+                   </div>
+
+
+               </div>
+
+               <div class="colum3">
+
+                   <h1>Informacion Contactos</h1>
+
+                   <div class="row2">
+                       <img src="img/house.png">
+                       <label>Centro de Estudios Cientificos y Tecnologicos
+                             N 9° "Juan De Dios Batiz"
+                       </label>
+                   </div>
+
+                   <div class="row2">
+                       <img src="img/smartphone.png">
+                       <label>+52 1 55 7895 2487</label>
+                   </div>
+
+                   <div class="row2">
+                       <img src="img/contact.png">
+                        <label>equipodosmasuno@gmail.com</label>
+                   </div>
+
+               </div>
+
+           </div>
+       
+       </div>
+       
+       <div class="container-footer">
+              <div class="footer">
+                   <div class="copyright">
+                       © 2021 Todos los Derechos Reservados | <a href="">DataJockey</a>
+                   </div>
+
+                   <div class="information">
+                       <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
+                   </div>
+               </div>
+
+           </div>
+       
+   </footer>
 </body>
 </html>

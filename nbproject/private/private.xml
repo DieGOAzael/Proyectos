@@ -8,8 +8,8 @@
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/error.jsp</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Servlet/agregarFavoritos.java</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Servlet/guardarLugar.java</file>
-            <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/index.jsp</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Servlet/borrarempleado.java</file>
+            <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/index.jsp</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/styleadmin.css</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/controlAdmin.html</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Control/AccionesEmpleado.java</file>
@@ -20,6 +20,8 @@
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Servlet/borrarUsuario.java</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Control/AccionesUsuario.java</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Modelo/Lugar.java</file>
+            <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/quienes.html</file>
+            <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/validacion.js</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/consultarusuario.jsp</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/sesion.html</file>
@@ -30,6 +32,7 @@
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Servlet/guardarUsuario.java</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/registroUsuario.jsp</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/style.css</file>
+            <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Servlet/filtrarLugares.java</file>
         </group>
     </open-files>
 </project-private>
