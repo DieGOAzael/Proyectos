@@ -24,6 +24,21 @@
         <servlet-name>filtrarLugares</servlet-name>
         <servlet-class>Servlet.filtrarLugares</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>agregarFavoritos</servlet-name>
+        <servlet-class>Servlet.agregarFavoritos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>equis</servlet-name>
+        <servlet-class>Servlet.equis</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>guardarLugar</servlet-name>
+        <servlet-class>Servlet.guardarLugar</servlet-class>
+    </servlet>
+    
+    
+    
     <servlet-mapping>
         <servlet-name>guardarUsuario</servlet-name>
         <url-pattern>/guardarUsuario</url-pattern>
@@ -48,6 +63,19 @@
         <servlet-name>filtrarLugares</servlet-name>
         <url-pattern>/filtrarLugares</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>agregarFavoritos</servlet-name>
+        <url-pattern>/agregarFavoritos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>equis</servlet-name>
+        <url-pattern>/equis</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>guardarLugar</servlet-name>
+        <url-pattern>/guardarLugar</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30

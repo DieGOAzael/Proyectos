@@ -27,35 +27,32 @@ public class guardarLugar extends HttpServlet{
            
             /*Ayuda no sé que pasa aquí*/
             
-            String nom_lug, st_lug, com_lug ;
-            int tel_lug, cal_lug, id_ad, id_al, id_col, id_cp;
-            
-            nom_lug = request.getParameter("nom_lug");
-            st_lug = request.getParameter("st_lug");
-            com_lug = request.getParameter("com_lug");
+            String nom_lug, st_lug;
+            int id_lug, id_ad, id_al, id_col, id_cp, id_tip, tel_lug, cal_lug;
+    
             tel_lug = Integer.parseInt(request.getParameter("tel_lug"));
+            nom_lug = request.getParameter("nom_lug");
             cal_lug = Integer.parseInt(request.getParameter("cal_lug"));
+            st_lug = request.getParameter("st_lug");
             id_ad = Integer.parseInt(request.getParameter("id_ad"));
             id_al = Integer.parseInt(request.getParameter("id_al"));
             id_col = Integer.parseInt(request.getParameter("id_col"));
             id_cp = Integer.parseInt(request.getParameter("id_cp"));
+            id_tip = Integer.parseInt(request.getParameter("id_tip"));
             
             
             
             Lugar e = new Lugar();
             
-            e.setNom_lug(nom_lug);
-            e.setSt_lug(st_lug);
-            e.setCom_lug(com_lug);
             e.setTel_lug( tel_lug);
+            e.setNom_lug(nom_lug);
             e.setCal_lug(cal_lug);
+            e.setSt_lug(st_lug);
             e.setId_ad(id_ad);
             e.setId_al(id_al);
             e.setId_col(id_col);
             e.setId_cp(id_cp);
-            
-            
-            
+            e.setId_tip(id_tip);
             
             int estatus = AccionesLugar.registrarLugar(e);
             

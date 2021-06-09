@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text/css"><link>
     
     <title>Salud.Maps | Buscar</title>
 </head>
@@ -27,7 +27,7 @@
            <li><a href="sesion.html"><b>Identificarse</b></a></li>
            <li><a href="quienes.html"><b>Conócenos</b></a></li>
            <li><a href="favoritos.jsp"><b>Favoritos</b></a></li>
-           <li><a href="controlAdmin.html"><b>Administrador</b></a></li>
+           
            
        </ul> 
     </header>
@@ -41,7 +41,7 @@
                     <div class="intro-message">
                         <h1>Salud.Maps</h1>
                         <hr class="intro-divider">
-                        <h3>El sitio donde ves todo lo relacionado a la salud en un clic.</h3>
+                        <h3>La salud a un clic de distancia</h3>
                         <ul class="list-inline intro-social-buttons">
                         </ul>
                     </div>
@@ -52,20 +52,27 @@
         <!-- /.container -->
       </div>
     </div>
+   
+        <div class="cuadro_texto">
+           <h3>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+         </h3>
+        </div>
+    
 
         
     <div class="cuadro_busqueda">
-        <p style="margin-left: 25px">Llena los filtros para realizar una búsqueda.<hr>
+        <p style="margin-left: 25px"><h3>Llena los filtros para realizar una búsqueda.</h3><hr>
         <!--Aquí es la selección del tipo de lugar relacionado a la salud.-->
-        <form action="">
-        <select name="tipo" id="id_tip" style="margin-left: 25px; font-size: large;">
+        <!--En este formulario se obtentrán los datos de id tipo de lugar e id alcaldía. -->
+        <form method="get"id="filtrarLugares" action="filtrarLugares"target="_self">
+        <select id="id_tip" name="tipo" style="margin-left: 25px; font-size: large;">
             <option value="0">Lugar</option>
-            <option value="1">Centro de salud</option>
-            <option value="2">Hospital</option>
+            <option value="1">Hospital</option>
+            <option value="2">Centro de Salud</option>
             <option value="3">Funeraria</option>
         </select>
         <!--Aquí es la selección de las alcaldías.-->
-        <select name="alcaldia" id="id_alc" style="margin-left: 50px; font-size: large;">
+        <select id="id_alc" name="alcaldia" style="margin-left: 50px; font-size: large;">
             <option value="0">Alcaldía</option>
             <option value="1">Azcapotzalco</option>
             <option value="2">Benito Juárez</option>
@@ -84,21 +91,13 @@
             <option value="15">Venustiano Carranza</option>
             <option value="16">Xochimilco</option>
         </select>
-        <input type="submit" value="Buscar" style="margin-left: 500px; font-size: large;">
+        <input type="submit" value="Buscar" onclick="window.location.reload()" style="margin-left: auto; font-size: large;">
         </form>
     </div>
-    <%
-        /*
-        String id_tip, id_alc;
-            
-            id_tip = request.getParameter("id_tip");
-            id_alc = request.getParameter("id_alc");
-*/
-        %>
 
      <%
             //todos los lugares
-            List<Lugar> lista = new AccionesLugar().getAllLugar();
+            List<Lugar> lista = new AccionesLugar().getFiltroLugar();
             
             %>
             
@@ -124,7 +123,7 @@
         
             
             <%
-            //recorrer el vector del producto
+            //recorrer el vector
             for(Lugar lugar : lista){
             //voy imprimiendo producto por producto
             
@@ -151,17 +150,17 @@
                             <div class="overlay" id="overlay">
                                 <div class="popup" id="popup">
                                     <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                                    <h3>SUSCRIBETE</h3>
-                                    <h4>Información del Lugar</h4>
+                                    <h3>Mapa e información adicional</h3>
+                                    <h4>Información del Lugar (sitio en construcción)</h4>
                                     <div class="tbl-content">
                                     <table cellpadding="0" cellspacing="0" border="0">
 
                                     <tr>
-                                    <td>hola</td>
-                                    <td>AUSTRALIAN COMPANY </td>
-                                    <td>$1.38</td>
-                                    <td>+2.01</td>
-                                    <td>-0.36%</td>
+                                    <td><%=lugar.getNom_lug()%></td>
+                                    <td><%=lugar.getSt_lug()%></td>
+                                    <td><%=lugar.getTel_lug()%></td>
+                                    <td><%=lugar.getId_col()%></td>
+                                    <td><%=lugar.getId_cp()%></td>
                                     </tr>              
                                     </table>
                                     </div>
@@ -177,11 +176,12 @@
             </div>
           
     </div>
-            </div>
+          
             
                     <%
                         }
                     %>
     <script type="text/javascript" src="popup.js"></script>
+    
 </body>
 </html>

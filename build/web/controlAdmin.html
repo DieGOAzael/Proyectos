@@ -22,22 +22,24 @@ and open the template in the editor.
     </header>
         
         <div class="cuadro_identificarse" >
-                <form method="post" name="registrarUsuario" action="guardarLugar">
+                <form method="post" name="registrarLugar" action="guardarLugar">
                       <h3>Agregar Lugar</h3>
                     <div class="container">
-                        <input type="text" placeholder="Nombre del lugar" name="nom_lug" required minlength="6" maxlength="35" onkeypress="return soloLetras(event)">
+                        <input type="text" placeholder="Contacto del Lugar (teléfono)" name="tel_lug" required minlength="8" maxlength="10">
                     </div>
                     <div class="container">
-                        <input type="text" placeholder="Contacto del Lugar (teléfono)" name="tel_lug" required minlength="8" maxlength="32" onsubmit="return validarEmail(event)">
+                        <input type="text" placeholder="Nombre del lugar" name="nom_lug" required minlength="6" maxlength="200">
+                    </div>
+                      <div class="container">
+                        <input type="text" placeholder="Calificación del lugar" name="cal_lug" required minlength="1" maxlength="2">
                     </div>
                     <div class="container">
-                        <input type="text"  placeholder="Calle del Lugar" name="st_lug"required required minlength="8" maxlength="32" onkeypress="return validar_clave(event)">
+                        <input type="text"  placeholder="Calle del Lugar" name="st_lug" required required minlength="4" maxlength="300">
                     </div>
                     <div class="container">
-                        <input type="text" placeholder="Calificación del lugar" name="cal_lug" required minlength="6" maxlength="35" onkeypress="return soloLetras(event)">
-                    </div>
-                    <div class="container">
-                        <input type="text" placeholder="Sitio web o link" name="url_lug" required minlength="8" maxlength="32" onsubmit="return validarEmail(event)">
+                        <select name="id_ad"> 
+                                    <option value="1">Id de Admin</option>
+                        </select>
                     </div>
                     <div class="container">
                         <select name="id_al"> 
@@ -59,13 +61,59 @@ and open the template in the editor.
                                     <option value="16">Xochimilco</option>
                         </select>
                     </div>
-                    <div class="container">
-                        <select name="id_tip"> 
-                                    <option value="1">Hospital</option>
-                                    <option value="2">Funeraria</option>
-                                    <option value="3">Centro de Salud</option>
-                        </select>
-                    </div>
+                      <div class="container">
+                          <select name="id_col">
+                                    <option value="1">Colonia Sindicato Mexicano de Electricistas</option>
+                                    <option value="2">Colonia Azcapotzalco</option>
+                                    <option value="3">Colonia Porvenir</option>
+                                    <option value="4">Colonia San Simón Ticumac</option>
+                                    <option value="5">Colonia General Pedro María Anaya</option>
+                                    <option value="6">Colonia San Pedro De Los Pinos</option>
+                                    <option value="7">Colonia Santa Úrsula Coapa</option>
+                                    <option value="8">Colonia Del Carmen Coyoacán</option>
+                                    <option value="9">Colonia Romero De Terrenos</option>
+                                    <option value="10">Colonia Cuajimalpa</option>
+                                    <option value="11">Colonia La Navidad</option>
+                                    <option value="12">Colonia El Yaqui</option>
+                                    <option value="13">Colonia Exhipodromo de Peralvillo</option>
+                                    <option value="14">Colonia Centro</option>
+                                    <option value="15">Colonia Juarez</option>
+                                    <option value="16">Colonia Nueva Atzacoalco</option>
+                                    <option value="17">Colonia Ticomán</option>
+                                    <option value="18">Colonia Candelaria Ticoman</option>
+                                    <option value="19">Colonia Pantitlan</option>
+                                    <option value="20">Colonia La Cruz</option>
+                                    <option value="21">Colonia Santiago Norte</option>
+                                    <option value="22">Colonia Lomas de San Lorenzo</option>
+                                    <option value="23">Colonia Citlali</option>
+                                    <option value="24">Colonia Paraje San Juan</option>
+                                    <option value="25">Colonia Héroes de Padierna</option>
+                                    <option value="26">Colonia San Jerónimo Lídice</option>
+                                    <option value="27">Colonia Barranca Seca</option>
+                                    <option value="28">Colonia Ave Real</option>
+                                    <option value="29">Colonia Ex-Hacienda de Tarango</option>
+                                    <option value="30">Colonia Maria G. de García Ruiz</option>
+                                    <option value="31">Colonia Anáhuac</option>
+                                    <option value="32">Colonia Santo Tomás</option>
+                                    <option value="33">Colonia Huichapan</option>
+                                    <option value="34">Colonia San Antonio Tecomit</option>
+                                    <option value="35">Colonia Villa Milpa Alta</option>
+                                    <option value="36">Colonia San Mateo</option>
+                                    <option value="37">Colonia Toriello Guerra</option>
+                                    <option value="38">Colonia San Miguel Topilejo</option>
+                                    <option value="39">Colonia Arenal de Guadalupe</option>
+                                    <option value="40">Colonia San Francisco Tlatenco</option>
+                                    <option value="41">Colonia La Habana</option>
+                                    <option value="42">Colonia La Asunción</option>
+                                    <option value="43">Colonia Michoacana</option>
+                                    <option value="44">Colonia Aeronáutica Militar</option>
+                                    <option value="45">Colonia Federal</option>
+                                    <option value="46">Colonia San Sebastián Tulyehualco</option>
+                                    <option value="47">Colonia Barrio Xaltocan</option>
+                                    <option value="48">Colonia La Concha</option>
+                                    
+                          </select>
+                      </div>
                       <div class="container">
                           <select name="id_cp">
                                     <option value="1">2060</option>
@@ -119,9 +167,25 @@ and open the template in the editor.
                                     
                           </select>
                       </div>
+                    <div class="container">
+                        <select name="id_tip"> 
+                                    <option value="1">Hospital</option>
+                                    <option value="2">Funeraria</option>
+                                    <option value="3">Centro de Salud</option>
+                        </select>
+                    </div>
+                      
                     
                 <input type="submit" value="Registrar lugar">   
                 </form>
         </div>
+        <div class="containerConsulta" >
+                
+                <a href="actualizarusuario.jsp" >Editar cuenta</a>
+                <br>
+              <!--Este link no puede ser usado por la gente 
+              -->
+                <a href="consultarusuario.jsp" >Consultar Usuarios</a>     
+            </div>
     </body>
 </html>

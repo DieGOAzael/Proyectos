@@ -4,14 +4,11 @@
  * and open the template in the editor.
  */
 package Servlet;
-
 import Control.AccionesLugar;
 import Modelo.Lugar;
-
+import Modelo.FavLugar;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Vector;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,9 +20,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author aza06
  */
-public class filtrarLugares extends HttpServlet {
-    public static int id_tip, id_alc;
-    
+public class agregarFavoritos extends HttpServlet {
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,26 +33,61 @@ public class filtrarLugares extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            HttpSession sesionuok = request.getSession();
+            
+            //generar el vector del detalle del carrito para saber que esta agregando
+            
+            Vector<FavLugar> vectorFavorito = null;
+            
+            //saber como esta el stock al momento de agregarlo, para que despues lo reste
+            
+            Vector<Lugar> stockProducto = null;
+            
+            //si se creo la sesion con el atributo del detalle de venta
+            
+            if(sesionuok.getAttribute("detalleVenta") != null){
+                //si existe una sesion con ese atributo y hay que obtener los datos
+                //de detalle de la compra que esta realizando el usuario
+                vectorFavorito = (Vector<FavLugar>)sesionuok.getAttribute("detalleVenta");
+                stockProducto = (Vector<Lugar>)sesionuok.getAttribute("stockProducto");
+            }else{
+                //no existe esa sesion y se crean por primera vez los carritos
+                vectorFavorito = new Vector<FavLugar>();
+                stockProducto = new Vector<Lugar>();
+            }
             
             //obtener que producto se esta seleccionado
-          
             
-            id_tip = Integer.parseInt(request.getParameter("tipo"));
-            id_alc = Integer.parseInt(request.getParameter("alcaldia"));
+            int codigo;
             
-            response.sendRedirect("index.jsp");
-                
+            codigo = Integer.parseInt(request.getParameter("txtCodigo").trim());
            
-                /* cosas de diseño */
+            
+            Lugar lugar = new Lugar();
+            
+            lugar = AccionesLugar.buscarLugarById(codigo);
+            
+            
+            
+            //creo el detalle de la compra
+            FavLugar lugarfavorito = new FavLugar();
+            
+            lugarfavorito.setId_favlug(vectorFavorito.size()+1);
+            lugarfavorito.setId_lugf(codigo);
+            
+            //agrego el detalle de la venta al vector detalle
+            vectorFavorito.add(lugarfavorito);
+            
+            sesionuok.setAttribute("detalleVenta", vectorFavorito);
+            
            
+            
+            response.sendRedirect("Favoritos.jsp");
         }
     }
-    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -96,7 +127,5 @@ public class filtrarLugares extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
-   
 
 }

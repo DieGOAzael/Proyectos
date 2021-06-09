@@ -5,27 +5,19 @@
  */
 package Servlet;
 
-import Control.AccionesLugar;
-import Modelo.Lugar;
-
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Vector;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author aza06
  */
-public class filtrarLugares extends HttpServlet {
-    public static int id_tip, id_alc;
-    
+public class equis extends HttpServlet {
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,26 +29,20 @@ public class filtrarLugares extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
-            //obtener que producto se esta seleccionado
-          
-            
-            id_tip = Integer.parseInt(request.getParameter("tipo"));
-            id_alc = Integer.parseInt(request.getParameter("alcaldia"));
-            
-            response.sendRedirect("index.jsp");
-                
-           
-                /* cosas de diseño */
-           
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet equis</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet equis at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
-    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -96,7 +82,5 @@ public class filtrarLugares extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
-   
 
 }

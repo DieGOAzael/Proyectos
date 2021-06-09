@@ -4,6 +4,8 @@
     Author     : aza06
 --%>
 
+<%@page import="Modelo.FavLugar"%>
+<%@page import="java.util.Vector"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" session="true" %>
 <%
     String usuario = "";
@@ -44,6 +46,40 @@
            <li><a href="#" class="active"><b>Favoritos</b></a></li>
        </ul> 
     </header>  
-        <h1>Aquí van los favoritos</h1>
+        
+        <%
+              /*obtener primero el carrito
+            Vector<FavLugar> vectorFavorito = 
+                    (Vector<FavLugar>)sesionuok.getAttribute("detalleVenta");
+            for(FavLugar e : vectorFavorito){
+                */
+            %>
+            
+            <div class="cuadro_lugares">
+                <h1>Página en construcción.</h1>
+                <h3>Página de Favoritos en proceso.</h3>
+                <%--
+                <div class="tbl-content">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                  <tr>
+                    <td><%=e.getNom_lugf()%></td>
+                    <td><%=e.getSt_lugf()%></td>
+                    <td><%=e.getTel_lugf()%></td>
+                    <td><%=e.getCal_lugf()%></td>
+                    <td>Agregar a Favoritos</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+          --%>
+    </div>
+            
+            <%    
+            /*}
+                */
+            %>
+            
     </body>
 </html>
