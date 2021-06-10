@@ -69,7 +69,7 @@ public class verificarUsuario extends HttpServlet{
                     response.sendRedirect("index.jsp");
                 }else{
                     //este es el admin
-                    response.sendRedirect("consultarusuario.jsp");
+                    response.sendRedirect("controlAdmin.html");
                 }
             }else{
                 //el usuario no esta registrado o no existe

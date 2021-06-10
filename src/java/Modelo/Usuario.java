@@ -50,8 +50,7 @@ public class Usuario {
                 u.setNom_usu(rs.getString("nom_usu"));
                 u.setEma_usu(rs.getString("ema_usu"));
                 u.setCon_usu(rs.getString("con_usu"));
-                /*
-                u.setPrivilegio_usuario(rs.getInt("privilegio_usuario"));*/
+                u.setPrivilegio_usuario(rs.getInt("privilegio_usuario"));
                 break;
                 
             }

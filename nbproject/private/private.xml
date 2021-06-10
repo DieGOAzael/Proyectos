@@ -13,6 +13,8 @@
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/styleadmin.css</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/controlAdmin.html</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Control/AccionesEmpleado.java</file>
+            <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Control/Conexion.java</file>
+            <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Servlet/guardarEmpleado.java</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Modelo/FavLugar.java</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/registroLugar.jsp</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Servlet/actualizarUsuario.java</file>
@@ -22,14 +24,17 @@
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Modelo/Lugar.java</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/quienes.html</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/validacion.js</file>
+            <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/porfaregistrate.jsp</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/consultarusuario.jsp</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Servlet/verificarUsuario.java</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/sesion.html</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/favoritos.jsp</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Modelo/Empleado.java</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/actualizarusuario.jsp</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Control/AccionesLugar.java</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Servlet/guardarUsuario.java</file>
+            <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/registroEmpleados.jsp</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/registroUsuario.jsp</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/web/style.css</file>
             <file>file:/C:/Users/aza06/Desktop/Salud.Maps/src/java/Servlet/filtrarLugares.java</file>
