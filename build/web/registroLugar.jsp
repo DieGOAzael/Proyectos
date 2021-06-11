@@ -20,17 +20,17 @@
         <header>
        <ul>
            <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
-           <li><a href="index.jsp"><b>Buscar</b></a></li>
+           <li><a href="controlAdmin.html"><b>Regresar</b></a></li>
        </ul> 
     </header>
         <!--Este jsp no se muy bien que hace
         -->
         <div class="cuadro_texto">
-        <h1>Registro de Usuario Exitoso</h1>
+        <h1>Lugar registrado con éxito</h1>
         <br>
         
-        <h3>Bienvenido</h3>
-        <h3>Inicie sesión para acceder a la función de favoritos.</h3>
+        <h3>Registro exitoso.</h3>
+        
         <br>
         </div>
              <br>

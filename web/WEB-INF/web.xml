@@ -40,6 +40,14 @@
         <servlet-name>borrarLugar</servlet-name>
         <servlet-class>Servlet.borrarLugar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>modificarLugar</servlet-name>
+        <servlet-class>Servlet.modificarLugar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>calificarLugarusuario</servlet-name>
+        <servlet-class>Servlet.calificarLugarusuario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>guardarUsuario</servlet-name>
         <url-pattern>/guardarUsuario</url-pattern>
@@ -79,6 +87,14 @@
     <servlet-mapping>
         <servlet-name>borrarLugar</servlet-name>
         <url-pattern>/borrarLugar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>modificarLugar</servlet-name>
+        <url-pattern>/modificarLugar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>calificarLugarusuario</servlet-name>
+        <url-pattern>/calificarLugarusuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

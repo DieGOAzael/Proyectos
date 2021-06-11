@@ -20,7 +20,7 @@
         <header>
        <ul>
            <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
-           <li><a href="sesion.html"><b>Identificarse</b></a></li>
+           <li><a href="sesion.jsp"><b>Identificarse</b></a></li>
        </ul> 
     </header>
         <!--Este jsp no se muy bien que hace

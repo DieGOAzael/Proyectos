@@ -1,6 +1,6 @@
 <%-- 
-    Document   : registroLugar
-    Created on : 3/06/2021, 04:37:29 PM
+    Document   : modificarLugar
+    Created on : 10/06/2021, 10:00:15 PM
     Author     : aza06
 --%>
 
@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <title>Salud.Maps | RegistroExitosoLugar</title>
+    <title>Salud.Maps | ModiciarLugarExitoso</title>
     </head>
     <body>
         <header>
@@ -26,10 +26,10 @@
         <!--Este jsp no se muy bien que hace
         -->
         <div class="cuadro_texto">
-        <h1>Lugar registrado con éxito</h1>
+        <h1>Se modifico el lugar con éxito</h1>
         <br>
         
-        <h3>Registro exitoso.</h3>
+        <h3>Actualización completa.</h3>
         
         <br>
         </div>

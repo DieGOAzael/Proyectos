@@ -66,9 +66,23 @@
     </div>
    
         <div class="cuadro_texto">
-            <center><h3><b>Instrucciones de uso</b></h3></center>
+               <%
+    if(sesionuok.getAttribute("usuario")==null){
+    
+    %> 
+            <center><h3><b>Bienvenido</b></h3></center>
+           <h3>Salud.Maps te permite visualizar tres tipos de lugares relacionados a la salud en la alcaldía de tu elección: centros de salud, hospitales y funerarias. Inicia sesión o registrate para poder usar funciones como el poder calficar un lugar, ingresar a tu cuenta y agregar un lugar a tu sección de favoritos. 
+         </h3>
+              <%
+    
+    }else{
+     %>
+        <center><h3><b>Instrucciones de uso</b></h3></center>
            <h3>Salud.Maps te permite visualizar tres tipos de lugares relacionados a la salud en la alcaldía de tu elección: centros de salud, hospitales y funerarias. Para realizar tu búsqueda, elige dos opciones en los filtros de abajo y da clic en <i>Buscar</i>. Selecciona el lugar de tu preferencia para visualizar su información.
          </h3>
+<%
+    }
+    %>
         </div>
     
 
@@ -104,7 +118,7 @@
             <option value="15">Venustiano Carranza</option>
             <option value="16">Xochimilco</option>
         </select>
-        <input type="submit" value="Buscar" onclick="window.location.reload()" style="margin-left: auto; font-size: large;">
+        <input type="submit" value="Buscar" style="margin-left: auto; font-size: large;">
         </form>
     </div>
 
@@ -153,7 +167,9 @@
                     <td><%=lugar.getSt_lug()%></td>
                     <td><%=lugar.getTel_lug()%></td>
                     <td><%=lugar.getCal_lug()%></td>
-                    <td><!--Pop up -->
+                    <td>
+                        <!--Pop up -->
+                        
                         <div class="contenedor">
                             <article>
                                 <button id="btn-abrir-popup" class="btn-abrir-popup">Abrir lugar</button>
@@ -163,8 +179,32 @@
                             <div class="overlay" id="overlay">
                                 <div class="popup" id="popup">
                                     <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                                    <h3>Mapa e información adicional</h3>
-                                    <h4>Información del Lugar (sitio en construcción)</h4>
+                                    <h3>Califica este Lugar</h3>
+                                    <h4>Queremos saber tu opinión, ingresa una calificación para evaluar este lugar</h4>
+                                    <form action="calificarLugarusuario">
+					<div class="contenedor-inputs">
+						<input type="number" placeholder="Calificación del Lugar del 1-10" name="cal_lug3">
+                                                <input type="number" placeholder="Ingresa el número que aparece en la parte de abajo" name="id_lug3">
+					</div>
+					<input type="submit" class="btn-submit" value="Calificar">
+				</form>
+                                    <br>
+                                    <br>
+                                    
+                                    <div class="tbl-header">
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                      <thead>
+                                        <tr>
+                                          <th>Nombre</th>
+                                          <th>Dirección</th>
+                                          <th>Teléfono</th>
+                                          <th>Calificación</th>
+                                          <th>Número a ingresar</th>
+                                          
+                                        </tr>
+                                      </thead>
+                                    </table>
+                                  </div>
                                     <div class="tbl-content">
                                     <table cellpadding="0" cellspacing="0" border="0">
 
@@ -172,16 +212,18 @@
                                     <td><%=lugar.getNom_lug()%></td>
                                     <td><%=lugar.getSt_lug()%></td>
                                     <td><%=lugar.getTel_lug()%></td>
-                                    <td><%=lugar.getId_col()%></td>
-                                    <td><%=lugar.getId_cp()%></td>
+                                    <td><%=lugar.getCal_lug()%></td>
+                                    <td><%=lugar.getId_lug()%></td>
+                                    
                                     </tr>              
                                     </table>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
                         </td>
-                    <td>Agregar a Favoritos</td>
+                    <td> </td>
                   </tr>
                 
                 </tbody>
@@ -194,11 +236,29 @@
                     <%
                         }
                     %>
-    <script type="text/javascript" src="popup.js"></script>
-    <br>
-    <br>
+
+<br>
+<br>
+        <%
+    
+    if(sesionuok.getAttribute("usuario")==null){
+    
+    %> 
+        
+           <%
+    
+    }else{
+     %>
+           <script type="text/javascript" src="popup.js"></script>
+    
 <center><iframe src="https://www.google.com/maps/d/embed?mid=1KQGa6fGl3QzvmmUw7WGmr0kxESfatl2j" width="640" height="480"></iframe></center>
+<br>
+    <br>
+<%
+    }
+    %>
 <footer>
+    
        
       <div class="container-footer-all">
        

@@ -51,23 +51,23 @@ public class AccionesLugar {
         int estatus = 0;
         try{
             Connection con = Conexion.getConnection();
-            String q = "update MLugar set nom_lug = ?, st_lugar = ?,"
-                    + "com_lug = ?, tel_lug = ?, cal_lug = ?, id_ad = ?, id_al = ?, id_col = ?, is_cp = ?"
+            String q = "update MLugar set  tel_lug = ?, nom_lug = ?, cal_lug = ?, st_lug = ?, id_ad = ?, id_al = ?, id_col = ?, id_cp = ?, id_tip = ?"
                     + " where id_lug = ?";
             
             PreparedStatement ps = con.prepareStatement(q);
             
-            ps.setString(1, e.getNom_lug());
-            ps.setString(2, e.getSt_lug());
-            ps.setString(3, e.getCom_lug());
-            ps.setString(4, e.getTel_lug());
-            ps.setInt(5, e.getCal_lug());
-            ps.setInt(6, e.getId_ad());
-            ps.setInt(7, e.getId_al());
-            ps.setInt(8, e.getId_col());
-            ps.setInt(9, e.getId_cp());
-            ps.setInt(10, e.getId_lug());
             
+            ps.setString(1, e.getTel_lug());
+            ps.setString(2, e.getNom_lug());
+            ps.setInt(3, e.getCal_lug());
+            ps.setString(4, e.getSt_lug());
+            ps.setInt(5, e.getId_ad());
+            ps.setInt(6, e.getId_al());
+            ps.setInt(7, e.getId_col());
+            ps.setInt(8, e.getId_cp());
+            ps.setInt(9, e.getId_tip());
+            ps.setInt(10, e.getId_lug());
+      
             estatus = ps.executeUpdate();
             System.out.println("Actualizacion del lugar exitosa.");
             con.close();
@@ -79,6 +79,36 @@ public class AccionesLugar {
         return estatus;
         
     }
+    
+    
+    
+    public static int calificarLugar(Lugar e){
+        int estatus = 0;
+        try{
+            Connection con = Conexion.getConnection();
+            String q = "update MLugar set cal_lug = ?"
+                    + " where id_lug = ?";
+            
+            PreparedStatement ps = con.prepareStatement(q);
+            
+            
+            
+            ps.setInt(1, e.getCal_lug());
+            ps.setInt(2, e.getId_lug());
+      
+            estatus = ps.executeUpdate();
+            System.out.println("Calificación del lugar exitosa.");
+            con.close();
+        }catch(Exception ed){
+            System.out.println("Error al calificar el lugar.");
+            System.out.println(ed.getMessage());
+        
+        }
+        return estatus;
+        
+    }
+    
+    
     
     public static int borrarLugar(int id_lug){
         int estatus = 0;

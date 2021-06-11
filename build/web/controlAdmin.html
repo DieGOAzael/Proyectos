@@ -20,7 +20,9 @@ and open the template in the editor.
            <li><a href="index.jsp"><b>Buscar</b></a></li>
        </ul> 
     </header>
-        
+        <br>
+        <br>
+        <br>
         <div class="cuadro_identificarse" >
                 <form method= "post" name= "registrarLugar" action= "guardarLugar" >
                       <h3>Agregar Lugar</h3>
@@ -179,8 +181,11 @@ and open the template in the editor.
                 <input type="submit" value="Registrar lugar">   
                 </form>
         </div>
+        <br>
+        <br>
+        <br>
         
-        <div class="cuadro_identificarse">
+        <div class="cuadro_identificarseborrar">
             <form method="post" action="borrarLugar">
                 <h3>Borrar un Lugar</h3>
                     <div class="container">
@@ -199,5 +204,175 @@ and open the template in the editor.
               -->
                 <a href="consultarusuario.jsp" >Consultar Usuarios</a>     
             </div>
+        
+        
+        
+        
+        
+        <!--
+        Sección para modificar
+        -->
+        
+        <div class="cuadro_identificarse" >
+                <form method= "post" name= "modificarLugar" action= "modificarLugar" >
+                      <h3>Modifica un Lugar</h3>
+                    <div class="container">
+                        <input type="text" placeholder="ID del Lugar" name="id_lug2" id="id_lug2">
+                    </div>
+                    <div class="container">
+                        <input type="text" placeholder="Contacto del Lugar (teléfono)" name="tel_lug2" id="tel_lug2" required minlength="8" maxlength="10">
+                    </div>
+                    <div class="container">
+                        <input type="text" placeholder="Nombre del lugar" name="nom_lug2" id="nom_lug2" required minlength="6" maxlength="200">
+                    </div>
+                      <div class="container">
+                          <input type="number" placeholder="Calificación del lugar" name="cal_lug2" id="cal_lug2" required minlength="1" maxlength="10">
+                    </div>
+                    <div class="container">
+                        <input type="text"  placeholder="Calle del Lugar" name="st_lug2" id="st_lug2" required required minlength="4" maxlength="300">
+                    </div>
+                    <div class="container">
+                        <select name="id_ad2" > 
+                                    <option value="1">Id de Admin</option>
+                        </select>
+                    </div>
+                    <div class="container">
+                        <select name="id_al2"> 
+                                    <option value="1">Azcapotzalco</option>
+                                    <option value="2">Benito Juárez</option>
+                                    <option value="3">Coyoacán</option>
+                                    <option value="4">Cuajimalpa de Morelos</option>
+                                    <option value="5">Cuauhtémoc</option>
+                                    <option value="6">Gustavo A. Madero</option>
+                                    <option value="7">Iztacalco</option>
+                                    <option value="8">Iztapalapa</option>
+                                    <option value="9">La Magdalena Contreras</option>
+                                    <option value="10">Álvaro Obregón</option>
+                                    <option value="11">Miguel Hidalgo</option>
+                                    <option value="12">Milpa Alta</option>
+                                    <option value="13">Tlalpan</option>
+                                    <option value="14">Tláhuac</option>
+                                    <option value="15">Venustiano Carranza</option>
+                                    <option value="16">Xochimilco</option>
+                        </select>
+                    </div>
+                      <div class="container">
+                          <select name="id_col2">
+                                    <option value="1">Colonia Sindicato Mexicano de Electricistas</option>
+                                    <option value="2">Colonia Azcapotzalco</option>
+                                    <option value="3">Colonia Porvenir</option>
+                                    <option value="4">Colonia San Simón Ticumac</option>
+                                    <option value="5">Colonia General Pedro María Anaya</option>
+                                    <option value="6">Colonia San Pedro De Los Pinos</option>
+                                    <option value="7">Colonia Santa Úrsula Coapa</option>
+                                    <option value="8">Colonia Del Carmen Coyoacán</option>
+                                    <option value="9">Colonia Romero De Terrenos</option>
+                                    <option value="10">Colonia Cuajimalpa</option>
+                                    <option value="11">Colonia La Navidad</option>
+                                    <option value="12">Colonia El Yaqui</option>
+                                    <option value="13">Colonia Exhipodromo de Peralvillo</option>
+                                    <option value="14">Colonia Centro</option>
+                                    <option value="15">Colonia Juarez</option>
+                                    <option value="16">Colonia Nueva Atzacoalco</option>
+                                    <option value="17">Colonia Ticomán</option>
+                                    <option value="18">Colonia Candelaria Ticoman</option>
+                                    <option value="19">Colonia Pantitlan</option>
+                                    <option value="20">Colonia La Cruz</option>
+                                    <option value="21">Colonia Santiago Norte</option>
+                                    <option value="22">Colonia Lomas de San Lorenzo</option>
+                                    <option value="23">Colonia Citlali</option>
+                                    <option value="24">Colonia Paraje San Juan</option>
+                                    <option value="25">Colonia Héroes de Padierna</option>
+                                    <option value="26">Colonia San Jerónimo Lídice</option>
+                                    <option value="27">Colonia Barranca Seca</option>
+                                    <option value="28">Colonia Ave Real</option>
+                                    <option value="29">Colonia Ex-Hacienda de Tarango</option>
+                                    <option value="30">Colonia Maria G. de García Ruiz</option>
+                                    <option value="31">Colonia Anáhuac</option>
+                                    <option value="32">Colonia Santo Tomás</option>
+                                    <option value="33">Colonia Huichapan</option>
+                                    <option value="34">Colonia San Antonio Tecomit</option>
+                                    <option value="35">Colonia Villa Milpa Alta</option>
+                                    <option value="36">Colonia San Mateo</option>
+                                    <option value="37">Colonia Toriello Guerra</option>
+                                    <option value="38">Colonia San Miguel Topilejo</option>
+                                    <option value="39">Colonia Arenal de Guadalupe</option>
+                                    <option value="40">Colonia San Francisco Tlatenco</option>
+                                    <option value="41">Colonia La Habana</option>
+                                    <option value="42">Colonia La Asunción</option>
+                                    <option value="43">Colonia Michoacana</option>
+                                    <option value="44">Colonia Aeronáutica Militar</option>
+                                    <option value="45">Colonia Federal</option>
+                                    <option value="46">Colonia San Sebastián Tulyehualco</option>
+                                    <option value="47">Colonia Barrio Xaltocan</option>
+                                    <option value="48">Colonia La Concha</option>
+                                    
+                          </select>
+                      </div>
+                      <div class="container">
+                          <select name="id_cp2">
+                                    <option value="1">2060</option>
+                                    <option value="2">2000</option>
+                                    <option value="3">2940</option>
+                                    <option value="4">3660</option>
+                                    <option value="5">3340</option>
+                                    <option value="6">3800</option>
+                                    <option value="7">4904</option>
+                                    <option value="8">4000</option>
+                                    <option value="9">4310</option>
+                                    <option value="10">5000</option>
+                                    <option value="11">5210</option>
+                                    <option value="12">5320</option>
+                                    <option value="13">6250</option>
+                                    <option value="14">6020</option>
+                                    <option value="15">6600</option>
+                                    <option value="16">7420</option>
+                                    <option value="17">7330</option>
+                                    <option value="18">7310</option>
+                                    <option value="19">8100</option>
+                                    <option value="20">8310</option>
+                                    <option value="21">8240</option>
+                                    <option value="22">9780</option>
+                                    <option value="23">9660</option>
+                                    <option value="24">9830</option>
+                                    <option value="25">10700</option>
+                                    <option value="26">10200</option>
+                                    <option value="27">10580</option>
+                                    <option value="28">1560</option>
+                                    <option value="29">11800</option>
+                                    <option value="30">1160</option>
+                                    <option value="31">11320</option>
+                                    <option value="32">11340</option>
+                                    <option value="33">11290</option>
+                                    <option value="34">12100</option>
+                                    <option value="35">12000</option>
+                                    <option value="36">12000</option>
+                                    <option value="37">14050</option>
+                                    <option value="38">14500</option>
+                                    <option value="39">14389</option>
+                                    <option value="40">13400</option>
+                                    <option value="41">13050</option>
+                                    <option value="42">13000</option>
+                                    <option value="43">15300</option>
+                                    <option value="44">15970</option>
+                                    <option value="45">15700</option>
+                                    <option value="46">16730</option>
+                                    <option value="47">16090</option>
+                                    <option value="48">16210</option>
+                                    
+                          </select>
+                      </div>
+                    <div class="container">
+                        <select name="id_tip2"> 
+                                    <option value="1">Hospital</option>
+                                    <option value="2">Funeraria</option>
+                                    <option value="3">Centro de Salud</option>
+                        </select>
+                    </div>
+                      
+                    
+                <input type="submit" value="Modificar lugar">   
+                </form>
+        </div>
     </body>
 </html>
