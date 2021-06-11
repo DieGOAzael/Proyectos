@@ -36,7 +36,7 @@ public class borrarUsuario extends HttpServlet{
             int estatus = AccionesUsuario.borrarUsuario(id_usu);
             
             if(estatus > 0){
-                response.sendRedirect("consultarEmpleados.jsp");
+                response.sendRedirect("controlAdmin.html");
                 /*cuestiones de diseño*/
             }else{
                 response.sendRedirect("error.jsp");

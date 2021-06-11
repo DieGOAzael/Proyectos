@@ -39,8 +39,8 @@
                         <td> <%=e.getNom_usu()%> </td>
                         <td> <%=e.getEma_usu()%> </td>
                         <td> <%=e.getCon_usu()%> </td>
-                        <td> <a href="editarempleado.jsp?id=<%=e.getId_usu()%>" >Editar</a> </td>
-                        <td> <a href="borrarempleado?id=<%=e.getId_usu()%>" >Borrar</a> </td>
+                        <td>  </td>
+                        <td> <a href="borrarUsuario?id_usu=<%=e.getId_usu()%>" >Borrar</a></td>
                     </tr>    
                     <%
                     }
