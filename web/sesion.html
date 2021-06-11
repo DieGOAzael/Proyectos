@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -13,6 +14,12 @@
         <header>
        <ul>
            <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
+            <%
+    String usuario = "";
+    HttpSession sesionuok = request.getSession();
+    if(sesionuok.getAttribute("usuario")==null){
+    
+    %> 
            <li><a href="index.jsp"><b>Buscar</b></a></li>
            <li><a href="#" class="active"><b>Identificarse</b></a></li>
            <li><a href="quienes.html"><b>Conócenos</b></a></li>
@@ -20,7 +27,7 @@
        </ul> 
     </header>  
         
-        <!--Registro -->
+        <!--Registro 
             <div class="cuadro_identificarse" >
                 <form method="post" name="registrarUsuario" action="guardarUsuario">
                     <h3>Registro</h3>
@@ -37,7 +44,7 @@
                 </form>
             </div>
         
-        <!--Inicio de sesión -->
+        <!--Inicio de sesión
         <div class="cuadro_identificarse" >
                 <form method="post" action="verificarUsuario" name="login">
                     <h3>Inicio de Sesión</h3>
@@ -136,3 +143,4 @@
    </footer>
     </body>
 </html>
+-->

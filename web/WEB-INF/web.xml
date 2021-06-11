@@ -36,9 +36,10 @@
         <servlet-name>guardarLugar</servlet-name>
         <servlet-class>Servlet.guardarLugar</servlet-class>
     </servlet>
-    
-    
-    
+    <servlet>
+        <servlet-name>borrarLugar</servlet-name>
+        <servlet-class>Servlet.borrarLugar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>guardarUsuario</servlet-name>
         <url-pattern>/guardarUsuario</url-pattern>
@@ -75,7 +76,10 @@
         <servlet-name>guardarLugar</servlet-name>
         <url-pattern>/guardarLugar</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>borrarLugar</servlet-name>
+        <url-pattern>/borrarLugar</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

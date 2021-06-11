@@ -22,7 +22,7 @@ public class AccionesLugar {
             
             PreparedStatement ps = con.prepareStatement(q);
             
-            ps.setInt(1, e.getTel_lug());
+            ps.setString(1, e.getTel_lug());
             ps.setString(2, e.getNom_lug());
             ps.setInt(3, e.getCal_lug());
             ps.setString(4, e.getSt_lug());
@@ -60,7 +60,7 @@ public class AccionesLugar {
             ps.setString(1, e.getNom_lug());
             ps.setString(2, e.getSt_lug());
             ps.setString(3, e.getCom_lug());
-            ps.setInt(4, e.getTel_lug());
+            ps.setString(4, e.getTel_lug());
             ps.setInt(5, e.getCal_lug());
             ps.setInt(6, e.getId_ad());
             ps.setInt(7, e.getId_al());
@@ -118,7 +118,7 @@ public class AccionesLugar {
                 e.setNom_lug(rs.getString(2));
                 e.setSt_lug(rs.getString(3));
                 e.setCom_lug(rs.getString(4));
-                e.setTel_lug(rs.getInt(5));
+                e.setTel_lug(rs.getString(5));
                 e.setCal_lug(rs.getInt(6));
                 e.setId_ad(rs.getInt(7));
                 e.setId_al(rs.getInt(8));
@@ -151,7 +151,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -194,7 +194,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -215,7 +215,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -234,7 +234,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -253,7 +253,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -272,7 +272,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -291,7 +291,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -310,7 +310,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -329,7 +329,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -348,7 +348,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -367,7 +367,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -386,7 +386,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -405,7 +405,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -424,7 +424,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -443,7 +443,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -462,7 +462,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -481,7 +481,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -500,7 +500,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -519,7 +519,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -546,7 +546,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -565,7 +565,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -584,7 +584,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -603,7 +603,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -622,7 +622,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -641,7 +641,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -660,7 +660,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -679,7 +679,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -698,7 +698,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -717,7 +717,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -736,7 +736,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -755,7 +755,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -774,7 +774,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -793,7 +793,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -812,7 +812,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -831,7 +831,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -850,7 +850,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -876,7 +876,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -895,7 +895,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -914,7 +914,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -933,7 +933,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -952,7 +952,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -971,7 +971,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -990,7 +990,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -1009,7 +1009,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -1028,7 +1028,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -1047,7 +1047,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -1066,7 +1066,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -1085,7 +1085,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -1104,7 +1104,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -1123,7 +1123,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -1142,7 +1142,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -1161,7 +1161,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));
@@ -1180,7 +1180,7 @@ public class AccionesLugar {
             while(rs.next()){
                 Lugar e = new Lugar();
                 e.setId_lug(rs.getInt(1));
-                e.setTel_lug((int) rs.getLong(2));
+                e.setTel_lug(rs.getString(2));
                 e.setNom_lug(rs.getString(3));
                 e.setCal_lug(rs.getInt(4));
                 e.setSt_lug(rs.getString(5));

@@ -41,9 +41,9 @@
        <ul>
            <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
            <li><a href="index.jsp"><b>Buscar</b></a></li>
-           <li><a href="#"><b>Identificarse</b></a></li>
-           <li><a href="quienes.html"><b>Conócenos</b></a></li>
            <li><a href="#" class="active"><b>Favoritos</b></a></li>
+           <li><a href="sesiondelusuario.jsp" class="active"><b>Tu cuenta</b></a></li>
+
        </ul> 
     </header>  
         

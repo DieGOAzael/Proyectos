@@ -1,107 +1,79 @@
 <%-- 
-    Document   : favoritos
-    Created on : 2/06/2021, 01:46:03 AM
+    Document   : sesion
+    Created on : 10/06/2021, 12:58:26 AM
     Author     : aza06
 --%>
 
-<%@page import="Modelo.FavLugar"%>
-<%@page import="java.util.Vector"%>
-<%@page contentType="text/html" pageEncoding="UTF-8" session="true" %>
-<%
-    String usuario = "";
-    HttpSession sesionuok = request.getSession();
-    if(sesionuok.getAttribute("usuario")==null){
-    
-    %>
-    
-    <jsp:forward page="porfaregistrate.jsp">
-        <jsp:param name="error" value="Es obligatorio Identificarse" />
-        
-    </jsp:forward>
-    
-    <%
-    
-    }else{
-        usuario = (String)sesionuok.getAttribute("usuario");
-    }
-    %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head><meta charset="UTF-8">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Favoritos</title>
-    </head>
+    <title>Salud.Maps | Identificarse</title>
     
+</head>
     <body>
         <header>
        <ul>
            <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
+            <%
+    String usuario = "";
+    HttpSession sesionuok = request.getSession();
+    if(sesionuok.getAttribute("usuario")==null){
+    
+    %> 
            <li><a href="index.jsp"><b>Buscar</b></a></li>
-           <li><a href="#" class="active"><b>Favoritos</b></a></li>
-           <li><a href="sesiondelusuario.jsp" class="active"><b>Tu cuenta</b></a></li>
-
+           <li><a href="#" class="active"><b>Identificarse</b></a></li>
+           
+            <%
+    
+    }else{
+     %>
+           <li><a href="index.jsp"><b>Buscar</b></a></li>
+           <li><a href="favoritos.jsp"><b>Favoritos</b></a></li>
+           <li><a href="sesiondelusuario.jsp"><b>Tu cuenta</b></a></li>
+           <%
+    }
+    %>
        </ul> 
     </header>  
         
-        <%
-              /*obtener primero el carrito
-            Vector<FavLugar> vectorFavorito = 
-                    (Vector<FavLugar>)sesionuok.getAttribute("detalleVenta");
-            for(FavLugar e : vectorFavorito){
-                */
-            %>
-            
-            <div class="cuadro_lugares">
-                <h1>Página en construcción.</h1>
-                <h3>Página de Favoritos en proceso.</h3>
-                <%--
-                <div class="tbl-content">
-              <table cellpadding="0" cellspacing="0" border="0">
-                <tbody>
-                  <tr>
-                    <td><%=e.getNom_lugf()%></td>
-                    <td><%=e.getSt_lugf()%></td>
-                    <td><%=e.getTel_lugf()%></td>
-                    <td><%=e.getCal_lugf()%></td>
-                    <td>Agregar a Favoritos</td>
-                  </tr>
-                
-                </tbody>
-              </table>
+        <!--Registro -->
+            <div class="cuadro_identificarse" >
+                <form method="post" name="registrarUsuario" action="guardarUsuario">
+                    <h3>Registro</h3>
+                    <div class="container">
+                        <input type="text" placeholder="Nombre de usuario" name="nom_usu" pattern=".{8,35}"  required title="6 a 35 caracteres, por favor"  onkeypress="return soloLetras(event)">
+                    </div>
+                    <div class="container">
+                        <input type="email" placeholder="Correo electrónico" name="ema_usu" required onsubmit="return validarEmail(event)">
+                    </div>
+                    <div class="container">
+                        <input type="password"  placeholder="Contraseña" name="con_usu" pattern=".{8,32}"  required title="8 a 32 caracteres, por favor"  onkeypress="return validar_clave(event)">
+                    </div>
+                    <input type="submit" value="Registrarse">    
+                </form>
             </div>
-          --%>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-    
-    
-    
-            
-            <%    
-            /*}
-                */
-            %>
+        
+        <!--Inicio de sesión -->
+        <div class="cuadro_identificarse" >
+                <form method="post" action="verificarUsuario" name="login">
+                    <h3>Inicio de Sesión</h3>
+                    <div class="container">
+                        <input type="text" placeholder="Nombre de usuario" name="txtUsuario" id="txtUsuario" pattern=".{8,35}"  required title="8 a 35 caracteres, por favor"  onkeypress="return soloLetras(event)">
+                    </div>
+                    
+                    <div class="container">
+                        <input type="password"  placeholder="Contraseña" name="txtPassword" id="txtPassword" pattern=".{8,32}" required title="8 a 32 caracteres, por favor"  onkeypress="return validar_clave(event)">
+                    </div>
+                    <input type="submit" value="Iniciar sesión" name="enviar">       
+                </form>
+            </div>
+        <script src="validacion.js"></script>
 <footer>
        
       <div class="container-footer-all">

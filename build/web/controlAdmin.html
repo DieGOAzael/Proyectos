@@ -22,22 +22,22 @@ and open the template in the editor.
     </header>
         
         <div class="cuadro_identificarse" >
-                <form method="post" name="registrarLugar" action="guardarLugar">
+                <form method= "post" name= "registrarLugar" action= "guardarLugar" >
                       <h3>Agregar Lugar</h3>
                     <div class="container">
-                        <input type="text" placeholder="Contacto del Lugar (teléfono)" name="tel_lug" required minlength="8" maxlength="10">
+                        <input type="text" placeholder="Contacto del Lugar (teléfono)" name="tel_lug" id="tel_lug" required minlength="8" maxlength="10">
                     </div>
                     <div class="container">
-                        <input type="text" placeholder="Nombre del lugar" name="nom_lug" required minlength="6" maxlength="200">
+                        <input type="text" placeholder="Nombre del lugar" name="nom_lug" id="nom_lug" required minlength="6" maxlength="200">
                     </div>
                       <div class="container">
-                        <input type="text" placeholder="Calificación del lugar" name="cal_lug" required minlength="1" maxlength="2">
+                          <input type="number" placeholder="Calificación del lugar" name="cal_lug" id="cal_lug" required minlength="1" maxlength="10">
                     </div>
                     <div class="container">
-                        <input type="text"  placeholder="Calle del Lugar" name="st_lug" required required minlength="4" maxlength="300">
+                        <input type="text"  placeholder="Calle del Lugar" name="st_lug" id="st_lug" required required minlength="4" maxlength="300">
                     </div>
                     <div class="container">
-                        <select name="id_ad"> 
+                        <select name="id_ad" > 
                                     <option value="1">Id de Admin</option>
                         </select>
                     </div>
@@ -179,6 +179,18 @@ and open the template in the editor.
                 <input type="submit" value="Registrar lugar">   
                 </form>
         </div>
+        
+        <div class="cuadro_identificarse">
+            <form method="post" action="borrarLugar">
+                <h3>Borrar un Lugar</h3>
+                    <div class="container">
+                        <input type="text" placeholder="Identificador del Lugar" name="id_lug" id="id_lug" required minlength="1" maxlength="5">
+                    </div>
+                <input type="submit" value="Borrar Lugar">   
+            </form>
+        </div>
+        
+        
         <div class="containerConsulta" >
                 
                 <a href="actualizarusuario.jsp" >Editar cuenta</a>

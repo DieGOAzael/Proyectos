@@ -1,79 +1,51 @@
 <%-- 
-    Document   : favoritos
-    Created on : 2/06/2021, 01:46:03 AM
+    Document   : sesiondelusuario
+    Created on : 10/06/2021, 07:51:00 PM
     Author     : aza06
 --%>
 
-<%@page import="Modelo.FavLugar"%>
-<%@page import="java.util.Vector"%>
-<%@page contentType="text/html" pageEncoding="UTF-8" session="true" %>
-<%
-    String usuario = "";
-    HttpSession sesionuok = request.getSession();
-    if(sesionuok.getAttribute("usuario")==null){
-    
-    %>
-    
-    <jsp:forward page="porfaregistrate.jsp">
-        <jsp:param name="error" value="Es obligatorio Identificarse" />
-        
-    </jsp:forward>
-    
-    <%
-    
-    }else{
-        usuario = (String)sesionuok.getAttribute("usuario");
-    }
-    %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head><meta charset="UTF-8">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Favoritos</title>
-    </head>
+    <title>Salud.Maps | Tu cuenta</title>
     
+</head>
     <body>
         <header>
        <ul>
            <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
+            <%
+    String usuario = "";
+    HttpSession sesionuok = request.getSession();
+    if(sesionuok.getAttribute("usuario")==null){
+    
+    %> 
+           <li><a href="index.jsp"><b>Buscar</b></a></li> 
+           <li><a href="#" class="active"><b>Tu cuenta</b></a></li>
+           
+            <%
+    
+    }else{
+     %>
            <li><a href="index.jsp"><b>Buscar</b></a></li>
-           <li><a href="#" class="active"><b>Favoritos</b></a></li>
-           <li><a href="sesiondelusuario.jsp" class="active"><b>Tu cuenta</b></a></li>
-
+           <li><a href="favoritos.jsp"><b>Favoritos</b></a></li>
+           <li><a href="#" class="active"><b>Tu cuenta</b></a></li>
+           <%
+    }
+    %>
        </ul> 
     </header>  
         
-        <%
-              /*obtener primero el carrito
-            Vector<FavLugar> vectorFavorito = 
-                    (Vector<FavLugar>)sesionuok.getAttribute("detalleVenta");
-            for(FavLugar e : vectorFavorito){
-                */
-            %>
-            
-            <div class="cuadro_lugares">
-                <h1>Página en construcción.</h1>
-                <h3>Página de Favoritos en proceso.</h3>
-                <%--
-                <div class="tbl-content">
-              <table cellpadding="0" cellspacing="0" border="0">
-                <tbody>
-                  <tr>
-                    <td><%=e.getNom_lugf()%></td>
-                    <td><%=e.getSt_lugf()%></td>
-                    <td><%=e.getTel_lugf()%></td>
-                    <td><%=e.getCal_lugf()%></td>
-                    <td>Agregar a Favoritos</td>
-                  </tr>
+        <div class="cuadro_lugares">
+                <h1>Aquí podrás modificar tu cuenta.</h1>
+                <h3>Página de cuenta del usuario en proceso.</h3>
                 
-                </tbody>
-              </table>
-            </div>
-          --%>
     </div>
     <br>
     <br>
@@ -93,15 +65,7 @@
     <br>
     <br>
     <br>
-    
-    
-    
-    
             
-            <%    
-            /*}
-                */
-            %>
 <footer>
        
       <div class="container-footer-all">

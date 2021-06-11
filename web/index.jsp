@@ -23,12 +23,24 @@
     <header>
        <ul>
            <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
-           <li><a href="#" class="active"><b>Buscar</b></a></li>
-           <li><a href="sesion.html"><b>Identificarse</b></a></li>
-           <li><a href="quienes.html"><b>Conócenos</b></a></li>
-           <li><a href="favoritos.jsp"><b>Favoritos</b></a></li>
-           
-           
+           <%
+    String usuario = "";
+    HttpSession sesionuok = request.getSession();
+    if(sesionuok.getAttribute("usuario")==null){
+    
+    %> 
+        <li><a href="#" class="active"><b>Buscar</b></a></li>
+        <li><a href="sesion.jsp"><b>Identificarse</b></a></li>
+           <%
+    
+    }else{
+     %>
+        <li><a href="#" class="active"><b>Buscar</b></a></li>
+        <li><a href="favoritos.jsp"><b>Favoritos</b></a></li> 
+        <li><a href="sesiondelusuario.jsp"><b>Tu cuenta</b></a></li>
+<%
+    }
+    %>
        </ul> 
     </header>
     <div class="intro-header">

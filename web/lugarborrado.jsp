@@ -1,80 +1,39 @@
 <%-- 
-    Document   : favoritos
-    Created on : 2/06/2021, 01:46:03 AM
+    Document   : lugarborrado
+    Created on : 10/06/2021, 07:39:11 PM
     Author     : aza06
 --%>
 
-<%@page import="Modelo.FavLugar"%>
-<%@page import="java.util.Vector"%>
-<%@page contentType="text/html" pageEncoding="UTF-8" session="true" %>
-<%
-    String usuario = "";
-    HttpSession sesionuok = request.getSession();
-    if(sesionuok.getAttribute("usuario")==null){
-    
-    %>
-    
-    <jsp:forward page="porfaregistrate.jsp">
-        <jsp:param name="error" value="Es obligatorio Identificarse" />
-        
-    </jsp:forward>
-    
-    <%
-    
-    }else{
-        usuario = (String)sesionuok.getAttribute("usuario");
-    }
-    %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head><meta charset="UTF-8">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Favoritos</title>
+    <title>Salud.Maps | RegistroExitosoLugar</title>
     </head>
-    
     <body>
         <header>
        <ul>
            <li><img src="img/logo_lateral_negro.png" alt="El logo del servicio."></li>
-           <li><a href="index.jsp"><b>Buscar</b></a></li>
-           <li><a href="#" class="active"><b>Favoritos</b></a></li>
-           <li><a href="sesiondelusuario.jsp" class="active"><b>Tu cuenta</b></a></li>
-
+           <li><a href="controlAdmin.html"><b>Regresar</b></a></li>
        </ul> 
-    </header>  
+    </header>
+        <!--Este jsp no se muy bien que hace
+        -->
+        <div class="cuadro_texto">
+        <h1>Lugar borrado con éxito</h1>
+        <br>
         
-        <%
-              /*obtener primero el carrito
-            Vector<FavLugar> vectorFavorito = 
-                    (Vector<FavLugar>)sesionuok.getAttribute("detalleVenta");
-            for(FavLugar e : vectorFavorito){
-                */
-            %>
-            
-            <div class="cuadro_lugares">
-                <h1>Página en construcción.</h1>
-                <h3>Página de Favoritos en proceso.</h3>
-                <%--
-                <div class="tbl-content">
-              <table cellpadding="0" cellspacing="0" border="0">
-                <tbody>
-                  <tr>
-                    <td><%=e.getNom_lugf()%></td>
-                    <td><%=e.getSt_lugf()%></td>
-                    <td><%=e.getTel_lugf()%></td>
-                    <td><%=e.getCal_lugf()%></td>
-                    <td>Agregar a Favoritos</td>
-                  </tr>
-                
-                </tbody>
-              </table>
-            </div>
-          --%>
-    </div>
+        <h3>Se borró el lugar</h3>
+        <h3>...</h3>
+        <br>
+        </div>
+             <br>
     <br>
     <br>
     <br>
@@ -92,17 +51,7 @@
     <br>
     <br>
     <br>
-    <br>
-    
-    
-    
-    
-            
-            <%    
-            /*}
-                */
-            %>
-<footer>
+    <footer>
        
       <div class="container-footer-all">
        
@@ -153,6 +102,7 @@
                              N 9° "Juan De Dios Batiz"
                        </label>
                    </div>
+                   <a href="porfaregistrate.jsp"></a>
 
                    <div class="row2">
                        <img src="img/smartphone.png">

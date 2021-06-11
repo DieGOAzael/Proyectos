@@ -48,6 +48,6 @@
             </tbody>
         </table>
         <br>
-        <a href="index.jsp" >Regresar al Menu Principal</a>
+        <a href="controlAdmin.html" >Regresar a los controles</a>
     </body>
 </html>

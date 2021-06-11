@@ -9,66 +9,45 @@ import Control.AccionesLugar;
 import Modelo.Lugar;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
-import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-public class guardarLugar extends HttpServlet{
-    
+/**
+ *
+ * @author aza06
+ */
+public class borrarLugar extends HttpServlet {
+
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-           
+            int id_lug = Integer.parseInt(request.getParameter("id_lug"));
             
-            System.out.println("Hola1");
-
-            String nom_lug, st_lug, tel_lug;
-            int id_ad, id_al, id_col, id_cp, id_tip, cal_lug;
-    
-            tel_lug = request.getParameter("tel_lug");
-            nom_lug = request.getParameter("nom_lug");
-            cal_lug = Integer.parseInt(request.getParameter("cal_lug"));
-            st_lug = request.getParameter("st_lug");
-            id_ad = Integer.parseInt(request.getParameter("id_ad"));
-            id_al = Integer.parseInt(request.getParameter("id_al"));
-            id_col = Integer.parseInt(request.getParameter("id_col"));
-            id_cp = Integer.parseInt(request.getParameter("id_cp"));
-            id_tip = Integer.parseInt(request.getParameter("id_tip"));
-            
-            System.out.println("Hola1");
-            
-            Lugar e = new Lugar();
-            
-            e.setTel_lug(tel_lug);
-            e.setNom_lug(nom_lug);
-            e.setCal_lug(cal_lug);
-            e.setSt_lug(st_lug);
-            e.setId_ad(id_ad);
-            e.setId_al(id_al);
-            e.setId_col(id_col);
-            e.setId_cp(id_cp);
-            e.setId_tip(id_tip);
-            
-            
-            
-            int estatus = AccionesLugar.registrarLugar(e);
-            
+            int estatus = AccionesLugar.borrarLugar(id_lug);
             
             if(estatus > 0){
-                response.sendRedirect("registroLugar.jsp");
+                response.sendRedirect("lugarborrado.jsp");
+                /*cuestiones de diseño*/
             }else{
                 response.sendRedirect("error.jsp");
             }
-            
         }
     }
-// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -106,5 +85,5 @@ public class guardarLugar extends HttpServlet{
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-    
+
 }

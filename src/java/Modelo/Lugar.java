@@ -10,20 +10,13 @@ package Modelo;
  * @author aza06
  */
 public class Lugar {
-    private int id_lug, id_ad, id_al, id_col, id_cp, id_tip, tel_lug, cal_lug;
-    private String nom_lug, st_lug, com_lug;
+    private int id_lug, id_ad, id_al, id_col, id_cp, id_tip, cal_lug;
+    private String nom_lug, st_lug, com_lug, tel_lug;
     
     public Lugar(){
 
 }
-    public int getId_tip(){
-        return id_tip;
-    }
-    
-    public void setId_tip(int id_tip){
-        this.id_tip = id_tip;
-    }
-    
+
     public int getId_lug() {
         return id_lug;
     }
@@ -64,12 +57,12 @@ public class Lugar {
         this.id_cp = id_cp;
     }
 
-    public int getTel_lug() {
-        return tel_lug;
+    public int getId_tip() {
+        return id_tip;
     }
 
-    public void setTel_lug(int tel_lug) {
-        this.tel_lug = tel_lug;
+    public void setId_tip(int id_tip) {
+        this.id_tip = id_tip;
     }
 
     public int getCal_lug() {
@@ -104,6 +97,13 @@ public class Lugar {
         this.com_lug = com_lug;
     }
 
+    public String getTel_lug() {
+        return tel_lug;
+    }
+
+    public void setTel_lug(String tel_lug) {
+        this.tel_lug = tel_lug;
+    }
     
     
 }
